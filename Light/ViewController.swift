@@ -9,10 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+   var lightOn = false
+    
+    @IBAction func ButtonPresed(_ sender: UIButton) {
 
+            lightOn = !lightOn
+    updateUi()
+    }
+    
+    func updateUi() {
+    view.backgroundColor = lightOn ? .white : .black
+    
+               }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateUi()
     }
 
 
